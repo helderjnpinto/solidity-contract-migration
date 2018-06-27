@@ -1,0 +1,410 @@
+{
+  "contractName": "StorableState",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060166075565b604051809103906000f0801580156031573d6000803e3d6000fd5b506000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506085565b604051610164806100c883390190565b6035806100936000396000f3006080604052600080fd00a165627a7a72305820da8dae9c2b14745aab89a8d4e63ac7dd40e796fcb7a347395fc6cce4a7fbdde40029608060405234801561001057600080fd5b50610144806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bd02d0f514610051578063e2a4853a14610096575b600080fd5b34801561005d57600080fd5b5061008060048036038101908080356000191690602001909291905050506100d1565b6040518082815260200191505060405180910390f35b3480156100a257600080fd5b506100cf6004803603810190808035600019169060200190929190803590602001909291905050506100f5565b005b60008060008360001916600019168152602001908152602001600020549050919050565b8060008084600019166000191681526020019081526020016000208190555050505600a165627a7a72305820f23eeee9ff40dd521d618be5143fed7627a275a66ee3054f816626cbc67dba1f0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820da8dae9c2b14745aab89a8d4e63ac7dd40e796fcb7a347395fc6cce4a7fbdde40029",
+  "sourceMap": "52:104:3:-;;;98:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;98:56:3;135:14;;:::i;:::-;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;135:14:3;126:6;;:23;;;;;;;;;;;;;;;;;;52:104;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "52:104:3:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"./KeyStore.sol\";\n\ncontract StorableState {\n  KeyStore _state;\n  constructor() public {\n     _state = new KeyStore();\n  }\n}\n",
+  "sourcePath": "/home/bd/Desktop/myrepos/github/solidity-contract-migration/v1/contracts/StorableState.sol",
+  "ast": {
+    "absolutePath": "/home/bd/Desktop/myrepos/github/solidity-contract-migration/v1/contracts/StorableState.sol",
+    "exportedSymbols": {
+      "StorableState": [
+        174
+      ]
+    },
+    "id": 175,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 160,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/home/bd/Desktop/myrepos/github/solidity-contract-migration/v1/contracts/KeyStore.sol",
+        "file": "./KeyStore.sol",
+        "id": 161,
+        "nodeType": "ImportDirective",
+        "scope": 175,
+        "sourceUnit": 33,
+        "src": "26:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          32
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 174,
+        "linearizedBaseContracts": [
+          174
+        ],
+        "name": "StorableState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 163,
+            "name": "_state",
+            "nodeType": "VariableDeclaration",
+            "scope": 174,
+            "src": "79:15:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_KeyStore_$32",
+              "typeString": "contract KeyStore"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 162,
+              "name": "KeyStore",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 32,
+              "src": "79:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KeyStore_$32",
+                "typeString": "contract KeyStore"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 172,
+              "nodeType": "Block",
+              "src": "119:35:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 170,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 163,
+                      "src": "126:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KeyStore_$32",
+                        "typeString": "contract KeyStore"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 168,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "135:12:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_KeyStore_$32_$",
+                          "typeString": "function () returns (contract KeyStore)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 167,
+                          "name": "KeyStore",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 32,
+                          "src": "139:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_KeyStore_$32",
+                            "typeString": "contract KeyStore"
+                          }
+                        }
+                      },
+                      "id": 169,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "135:14:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KeyStore_$32",
+                        "typeString": "contract KeyStore"
+                      }
+                    },
+                    "src": "126:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyStore_$32",
+                      "typeString": "contract KeyStore"
+                    }
+                  },
+                  "id": 171,
+                  "nodeType": "ExpressionStatement",
+                  "src": "126:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 173,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "109:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 165,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:0:3"
+            },
+            "scope": 174,
+            "src": "98:56:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 175,
+        "src": "52:104:3"
+      }
+    ],
+    "src": "0:157:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/bd/Desktop/myrepos/github/solidity-contract-migration/v1/contracts/StorableState.sol",
+    "exportedSymbols": {
+      "StorableState": [
+        174
+      ]
+    },
+    "id": 175,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 160,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/home/bd/Desktop/myrepos/github/solidity-contract-migration/v1/contracts/KeyStore.sol",
+        "file": "./KeyStore.sol",
+        "id": 161,
+        "nodeType": "ImportDirective",
+        "scope": 175,
+        "sourceUnit": 33,
+        "src": "26:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          32
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 174,
+        "linearizedBaseContracts": [
+          174
+        ],
+        "name": "StorableState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 163,
+            "name": "_state",
+            "nodeType": "VariableDeclaration",
+            "scope": 174,
+            "src": "79:15:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_KeyStore_$32",
+              "typeString": "contract KeyStore"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 162,
+              "name": "KeyStore",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 32,
+              "src": "79:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KeyStore_$32",
+                "typeString": "contract KeyStore"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 172,
+              "nodeType": "Block",
+              "src": "119:35:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 170,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 163,
+                      "src": "126:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KeyStore_$32",
+                        "typeString": "contract KeyStore"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 168,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "135:12:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_KeyStore_$32_$",
+                          "typeString": "function () returns (contract KeyStore)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 167,
+                          "name": "KeyStore",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 32,
+                          "src": "139:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_KeyStore_$32",
+                            "typeString": "contract KeyStore"
+                          }
+                        }
+                      },
+                      "id": 169,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "135:14:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KeyStore_$32",
+                        "typeString": "contract KeyStore"
+                      }
+                    },
+                    "src": "126:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyStore_$32",
+                      "typeString": "contract KeyStore"
+                    }
+                  },
+                  "id": 171,
+                  "nodeType": "ExpressionStatement",
+                  "src": "126:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 173,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "109:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 165,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:0:3"
+            },
+            "scope": 174,
+            "src": "98:56:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 175,
+        "src": "52:104:3"
+      }
+    ],
+    "src": "0:157:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-06-27T15:02:45.335Z"
+}
