@@ -5,7 +5,10 @@ import "./Ownable.sol";
 
 contract Proxy is StorableState, Ownable {
   address public _implementation;
-
+  
+  // event Upgraded(address indexed implementation);
+  event Upgraded(address implementation);
+  
   constructor(address imp) public {
     _implementation = imp;
   }
@@ -17,9 +20,8 @@ contract Proxy is StorableState, Ownable {
   function upgradeTo(address impl) public onlyOwner {
     require(_implementation != impl);
     _implementation = impl;
+    emit Upgraded(impl);
   }
-
-
    /*
     delegatecall(gas, _impl, add(data, 0x20), mload(data), 0, 0);
       In below function delegate call is calling code at

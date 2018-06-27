@@ -1,13 +1,19 @@
 pragma solidity ^0.4.24;
 
-import "../StorableState.sol";
+import "../KeyStore.sol";
 
-contract v2 is StorableState {
+contract v2 {
+  KeyStore _state;
+  
   constructor() public {
-      _state.setUint("version", 2);
   }
 
-  function getVersion() view public  returns (uint256) {
+  function setV(uint value) public {
+    _state.setUint("version", value);
+  }
+
+  function getV() view public  returns (uint256) {
     return _state.getUint("version");
   }
+
 }
